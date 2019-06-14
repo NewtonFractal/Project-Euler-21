@@ -5,17 +5,14 @@ divisors_a = []
 divisors_b = [1,2,4,71]
 numbers = []
 
-def divisorGenerator(n):
-    large_divisors = []
-    for i in range(1, int(math.sqrt(n)+1)):
-        if n % i == 0:
-            yield i
-            if i*i != n:
-                large_divisors.append(n / i)
-    for divisor in reversed(large_divisors):
-        yield divisor
+divist = []
+def divisors(n):
+    for x in range(1,int(math.sqrt(n)+1)):
+        if n % x == 0:
+            divist.append(int(n/x))
+            
+divisors(1000)
 
-print(list(divisorGenerator(100)))
 
 def Amicable_numbers(upper_bound):
     for x in range(1, upper_bound):
