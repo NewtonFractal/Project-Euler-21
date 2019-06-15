@@ -1,7 +1,8 @@
 import time
 import math
-start = time.time()
+
 divisor_sums = []
+divisor_number = []
 amicable = []
 
 def divisors(n):
@@ -12,11 +13,12 @@ def divisors(n):
             if x < math.sqrt(n):
                 divisor_list.append(x)
     divisor_sums.append(sum(divisor_list) - n)
-
-for x in range(1,10000):
+    divisor_number.append(n)
+    
+    
+for x in range(220,230):
     divisors(x)
 
-print(divisor_sums)
 
 
 def Amicable_numbers(upper_bound):
