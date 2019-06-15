@@ -2,8 +2,8 @@ import time
 import math
 
 divisor_sums = []
+amicable =[]
 start = time.time()
-
 
 def divisors(n):
     divisor_list = []
@@ -17,23 +17,18 @@ def divisors(n):
     else:
         divisor_sums.append(0)
 
-
 for x in range(1,10001):
     divisors(x)
 
+def Amicable_numbers(n):
+    for x in range(1,n):
+        y = divisor_sums[x-1]
+        z = divisor_sums[y-1]
+        if z == x:
+            amicable.append(x)
 
-print(divisor_sums[219])
-print(divisor_sums[283])
-for x in range(1,10000):
-    y = divisor_sums[x-1]
-    z = divisor_sums[y-1]
-    if y == z:
-        print(x)
-
-
-
-
-
-
+Amicable_numbers(10000)
+print(sum(amicable))
+print(amicable)
 end = time.time()
 print(end - start)
