@@ -1,19 +1,18 @@
 import time
 import math
 start = time.time()
-divisors_a = []
-divisors_b = [1,2,4,71]
-numbers = []
-
-divisor_list = []
+divisor_sums = []
 def divisors(n):
+    divisor_list = []
     for x in range(1,int(math.sqrt(n)+1)):
         if n % x == 0:
             divisor_list.append(int(n/x))
             if x < math.sqrt(n):
                 divisor_list.append(x)
+    divisor_sums.append(sum(divisor_list)-n)
                 
-divisors(1000)
+for x in range(1,100):
+    divisors(x)
 
 
 def Amicable_numbers(upper_bound):
