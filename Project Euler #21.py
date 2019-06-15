@@ -23,9 +23,10 @@ for x in range(1,10001):
 def Amicable_numbers(n):
     for x in range(1,n):
         y = divisor_sums[x-1]
-        z = divisor_sums[y-1]
-        if z == x:
-            amicable.append(x)
+        if x != y:
+            z = divisor_sums[y-1]
+            if z == x:
+                amicable.append(x)
 
 Amicable_numbers(10000)
 print(sum(amicable))
