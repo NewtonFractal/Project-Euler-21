@@ -17,8 +17,11 @@ def divisors(n):
     else:
         divisor_sums.append(0)
 
-for x in range(1,10001):
+def generator(n):
+  for x in range(1,n):
     divisors(x)
+
+generator(10001)
 
 def Amicable_numbers(n):
     for x in range(1,n):
