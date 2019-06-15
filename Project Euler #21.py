@@ -5,12 +5,14 @@ divisors_a = []
 divisors_b = [1,2,4,71]
 numbers = []
 
-divist = []
+divisor_list = []
 def divisors(n):
     for x in range(1,int(math.sqrt(n)+1)):
         if n % x == 0:
-            divist.append(int(n/x))
-            
+            divisor_list.append(int(n/x))
+            if x < math.sqrt(n):
+                divisor_list.append(x)
+                
 divisors(1000)
 
 
