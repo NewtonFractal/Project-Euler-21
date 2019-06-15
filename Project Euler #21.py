@@ -1,9 +1,9 @@
 import time
 import math
-
 divisor_sums = []
 divisor_number = []
 amicable = []
+start = time.time()
 
 def divisors(n):
     divisor_list = []
