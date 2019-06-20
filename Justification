@@ -1,2 +1,0 @@
-Since the sum of proper divisors of a prime number always is 1, you only need to search for multiples of primes that are smaller than 5000.
-By the Euclid-Euler theorem (2^(p-1))(2^p-1) is an even perfect number iff p is a prime number.
